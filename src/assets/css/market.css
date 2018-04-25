@@ -1,0 +1,186 @@
+/*状态栏 actived*/
+#Audit_ul .router-link-exact-active{
+	background: #FFFFFF !important;
+	color: #6ADBD9
+}
+.router-link-exact-active {
+    background: #262626 !important;
+}
+
+#Audit_ul{
+	width: 180px;
+}
+/*Market*/
+
+#Market{
+	width: 100%;
+	height:auto;
+	/*background:url(../img/DT.jpg);*/
+	padding: 20px 30px 5px 30px;
+}
+
+.Market_main{
+	height: 94%;
+	width: 100%;
+	padding: 0px 30px;
+	/*background: rgba(121,121,121,0.7);*/
+}
+
+.Market_footer{
+	margin-top: 5px;
+	height: 5%;
+	color: white;
+	text-align: right;
+	font-size: 20px;
+}
+
+
+.Market_main .el-tabs{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	display: -webkit-flex; 
+	flex-direction:column;
+}
+
+.Market_main .el-tabs .el-tabs__content{
+	width: 100%;
+	flex: 1;
+}
+
+.Market_main .el-tabs .el-tabs__content .el-tab-pane{
+	height: 100%;
+	width: 100%;
+}
+.Market_main .el-tabs__item{
+	background: rgba(121,121,121,0.4);
+	border-bottom: 0px !important;
+	border-color: transparent !important;
+	color: white;
+	text-align: left;
+	font-size: 16px;
+}
+
+.Market_main .el-tabs--card>.el-tabs__header{
+	border: 0px;
+	margin-bottom: 0px;
+	height: 40px;
+}
+
+
+.Market_main .el-tabs--card>.el-tabs__header .el-tabs__nav{
+	border-radius: 0px;
+	border: 0px;
+}
+
+.Market_main .el-tabs--card>.el-tabs__header .el-tabs__item.is-active{
+	background: rgba(121,121,121,0.7);
+}
+
+.Market_main .el-tab-pane{
+	background: rgba(121,121,121,0.7);
+
+}
+
+.market_select_box{
+	position: absolute;
+	width: auto;
+	height: 35px;
+	z-index: 100;
+	right: 60px;
+	color: white;
+	top:105px;
+	font-size: 13px;
+}
+
+.market_select_box>span{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#brand{
+	border-radius: 5px;
+    padding: 0 10px;
+    color:#4d4d4d;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 210px;
+    font-size: 10px;
+    -webkit-transform: scale(.98);
+    margin-left: -5px;
+}
+
+#year{
+	border-radius: 5px;
+    padding: 0 10px;
+    color:#4d4d4d;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 120px;
+    font-size: 10px;
+    -webkit-transform: scale(.98);
+    margin-left: -5px;
+}
+
+
+#monthStart{
+	border-radius: 5px;
+    padding: 0 10px;
+    color:#4d4d4d;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 120px;
+    font-size: 10px;
+    -webkit-transform: scale(.98);
+    margin-left: -5px;
+}
+
+#monthEnd{
+	border-radius: 5px;
+    padding: 0 10px;
+    color:#4d4d4d;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 120px;
+    font-size: 10px;
+    -webkit-transform: scale(.98);
+    margin-left: -5px;
+}
+
+

@@ -1,0 +1,34 @@
+{
+  "status": 0,
+  "data":
+  {
+    "status": "Checking",
+    "principal": "Penny Jiang",
+    "media_attribute": "Contract media",
+    "media_list": "Yes",
+    "effected_on": "2018-03-01",
+    "expired_on": "2019-02-28",
+    "deal_type": "Discount",
+    "commitment": null,
+    "ratecard_inflation_vsya": 0.3,
+    "unit_price_inflation_vsya": 0.0,
+    "scenario_1": 850000.0,
+    "scenario_2": 4667428.0,
+    "scenario_3": 0.0,
+    "scenario_4": 0.0,
+    "scenarioPercent1": 0.4482,
+    "scenarioPercent2": 0.6651,
+    "scenarioPercent3": 0.0,
+    "scenarioPercent4": 0.0,
+    "buying_pattern": "CPD",
+    "discount_off": 0.6,
+    "deal_comment": "全网站资源实行1000万阶梯价格政策",
+    "compensation": "",
+    "pay_factor": 0.056338028169,
+    "pay_comment": "",
+    "total_bonus_rate_net_cost": 15.25,
+    "total_paid_ratecard": 7.1,
+    "bonus": "",
+    "remark": ""
+  }
+}
