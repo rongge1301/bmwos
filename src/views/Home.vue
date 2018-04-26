@@ -96,7 +96,7 @@
 
 <script>
 import Bus from '@/bus/bus.js'
-
+import Util from '../common/util'
 
 export default {
   name: 'Home',
@@ -153,40 +153,18 @@ export default {
       $("#Audit_ul_online").hide()
        $("#Audit_ul>li:eq(2)").removeClass('Audit_ul_actived')
      })
-   
+    //设置cookie
+    this.$Util.setCookie('yh_login_token','D1A69EDE7809EA401895750919C577A4');
   },
   methods:{
-    // getQueryString(name) {
-    //     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)",'i'); // 匹配目标参数
-    //     var result = window.location.search.substr(1).match(reg); // 对querystring匹配目标参数
-    //     if (result != null) {
-    //       return decodeURIComponent(result[2]);
-    //     } else {
-    //       return null;
-    //     }
-    // },
-    getCookie(name){
-        name = name + "="
-        var start = document.cookie.indexOf(name),
-            value = null;
-        if(start>-1){
-            var end = document.cookie.indexOf(";",start);
-            if(end == -1){
-                end = document.cookie.length;
-            }
-            value = document.cookie.substring(start+name.length,end);
-        }
-        return value;
-    }
   },
   created(){
       // let token ="123";
       // this.$store.commit('setToken',token);
-      let token = this.getCookie('yh_login_token');
-
+      let token = this.$Util.getCookie('yh_login_token');
       this.$http({
-        method:'post',
-        url:'http://114.55.92.124:9090/bmwos/user/get_user_info.do?yhToken='+token,
+        url:this.$Urls.get_user_info + '?yhToken=' + token,
+        method:'POST'
       }).then(response => {
           if(response.data.status == 0){
               this.$store.commit('setToken',token);

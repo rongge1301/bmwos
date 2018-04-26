@@ -12,13 +12,16 @@ import 'ztree'
 import axios from 'axios'
 import Vuex from 'vuex'
 import store from './store/store'
+import Util from "./common/util";
+import Urls from './common/urls'
 
 Vue.use(Vuex);
-
 
 Vue.use(ElementUI)
 
 Vue.prototype.$http = axios
+Vue.prototype.$Util = Util;
+Vue.prototype.$Urls = Urls;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

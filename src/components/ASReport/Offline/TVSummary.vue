@@ -323,8 +323,6 @@
 </template>
 
 <script>
-import Tab from '../../../util/tab'
-
 export default {
   name:'TVSummary',
   data: function () {
@@ -381,20 +379,10 @@ export default {
       },
       runReport() {
 
-      },
-      getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", 'i'); // 匹配目标参数
-        var result = window.location.search.substr(1).match(reg); // 对querystring匹配目标参数
-        if (result != null) {
-          return decodeURIComponent(result[2]);
-        } else {
-          return null;
-        }
-
-      },
+      }
     },
     mounted:function(){
-      Tab('[name=spend]','.tab-content')
+      Util.tab('[name=spend]','.tab-content')
     }
 
 }

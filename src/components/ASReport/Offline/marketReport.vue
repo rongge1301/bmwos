@@ -15,112 +15,93 @@
           <input type="radio" name="spend" id="inlineRadio2" value="spend2" tab-label="market"> Market Spend
         </label>
         <label class="radio-inline">
-          <input type="radio" name="spend" id="inlineRadio3" value="spend3" tab-label="media"> Media Cost Inflation
+          <input type="radio" name="spend" id="inlineRadio3" value="spend3" tab-label="media-cost"> Media Cost Inflation
         </label>
       </div>
-      <div class="tab-content com">
-        <div class="list-item">
-          <div class="time_box">
-            <label class="list-title">Period:</label>
-            <el-select v-model="selectedYear" placeholder="请选择" id="year">
-              <el-option
-                v-for="item in optionsYear"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-            <el-select v-model="selectedStart" placeholder="请选择" id="start">
-              <el-option
-                v-for="item in optionsMonth"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-            —
-            <el-select v-model="selectedEnd" placeholder="请选择" id="end">
-              <el-option
-                v-for="item in optionsMonth"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-          </div>
+
+      <div class="list-item">
+        <div class="time_box">
+          <label class="list-title">Period:</label>
+          <el-select v-model="startYear" placeholder="请选择" id="startYear">
+            <el-option
+              v-for="item in optionsYear"
+              :key="item.value"
+              :label="item.value"
+              :value="item.value">
+            </el-option>
+          </el-select>
+          <el-select v-model="startMon" placeholder="请选择" id="startMon">
+            <el-option
+              v-for="item in optionsMonth"
+              :key="item.value"
+              :label="item.value"
+              :value="item.value">
+            </el-option>
+          </el-select>
+          —
+          <el-select v-model="endYear" placeholder="请选择" id="endYear">
+            <el-option
+              v-for="item in optionsYear"
+              :key="item.value"
+              :label="item.value"
+              :value="item.value">
+            </el-option>
+          </el-select>
+          <el-select v-model="endMon" placeholder="请选择" id="endMon">
+            <el-option
+              v-for="item in optionsMonth"
+              :key="item.value"
+              :label="item.value"
+              :value="item.value">
+            </el-option>
+          </el-select>
         </div>
+      </div>
+      <div class="tab-content com">
         <div class="list-item">
           <label class="list-title">
             Brand:
           </label>
-          <label class="radio-inline">
-            <input type="checkbox" name="" id="" value=""> BMW
-          </label>
-          <label class="radio-inline">
-            <input type="checkbox" name="" id="" value=""> Audi
-          </label>
-          <label class="radio-inline">
-            <input type="checkbox" name="" id="" value=""> MB
-          </label>
+          <form id="Brand">
+            <label class="radio-inline">
+              <input type="checkbox" v-model="Brand" name="Brand" id="" value="BMW"> BMW
+            </label>
+            <label class="radio-inline">
+              <input type="checkbox" v-model="Brand" name="Brand" id="" value="Audi"> Audi
+            </label>
+            <label class="radio-inline">
+              <input type="checkbox" v-model="Brand" name="Brand" id="" value="MB"> MB
+            </label>
+          </form>
         </div>
         <div class="list-item">
           <label class="list-title">
             Dealers included:
           </label>
           <label class="radio-inline">
-            <input type="radio" name="" id="" value=""> YES
+            <input type="radio" v-model="Dealers" name="Dealers" id="" value="yes"> YES
           </label>
           <label class="radio-inline">
-            <input type="radio" name="" id="" value=""> NO
+            <input type="radio" v-model="Dealers" name="Dealers" id="" value="no"> NO
           </label>
         </div>
       </div>
       <div class="tab-content market">
         <div class="list-item">
-          <div class="time_box">
-            <label class="list-title">Period:</label>
-            <el-select v-model="selectedYear" placeholder="请选择" id="year">
-              <el-option
-                v-for="item in optionsYear"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-            <el-select v-model="selectedStart" placeholder="请选择" id="start">
-              <el-option
-                v-for="item in optionsMonth"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-            —
-            <el-select v-model="selectedEnd" placeholder="请选择" id="end">
-              <el-option
-                v-for="item in optionsMonth"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-          </div>
-        </div>
-        <div class="list-item">
           <label class="list-title">
             Market Group:
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" name="" id="" value=""> Total Market
+            <input type="checkbox" v-model="Market" name="Market" id="" value="Total Market"> Total Market
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" name="" id="" value=""> Automotive Market
+            <input type="checkbox" v-model="Market" name="Market" id="" value="Automotive Market"> Automotive Market
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" name="" id="" value=""> Car Market
+            <input type="checkbox" v-model="Market" name="Market" id="" value="Car Market"> Car Market
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" name="" id="" value=""> Car Market
+            <input type="checkbox" v-model="Market" name="Market" id="" value="Car Market"> Car Market
           </label>
         </div>
         <div class="list-item">
@@ -128,44 +109,14 @@
             Dealers included:
           </label>
           <label class="radio-inline">
-            <input type="radio" name="" id="" value=""> YES
+            <input type="radio" name="Dealers" id="" value="yes"> YES
           </label>
           <label class="radio-inline">
-            <input type="radio" name="" id="" value=""> NO
+            <input type="radio" name="Dealers" id="" value="no"> NO
           </label>
         </div>
       </div>
-      <div class="tab-content media">
-        <div class="list-item">
-          <div class="time_box">
-            <label class="list-title">Period:</label>
-            <el-select v-model="selectedYear" placeholder="请选择" id="year">
-              <el-option
-                v-for="item in optionsYear"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-            <el-select v-model="selectedStart" placeholder="请选择" id="start">
-              <el-option
-                v-for="item in optionsMonth"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-            —
-            <el-select v-model="selectedEnd" placeholder="请选择" id="end">
-              <el-option
-                v-for="item in optionsMonth"
-                :key="item.value"
-                :label="item.value"
-                :value="item.value">
-              </el-option>
-            </el-select>
-          </div>
-        </div>
+      <div class="tab-content media-cost">
       </div>
     </div>
 
@@ -179,7 +130,7 @@
 
 <script>
   import Bus from '@/bus/bus.js'
-
+  import Urls from '../../../common/urls'
 
   export default {
     name: 'marketReport',
@@ -193,11 +144,12 @@
           "brand": [],
           "market": [],
           "dealer_include": "",
-          yhToken: sessionStorage.getItem("token")
+          yhToken: this.$Util.getCookie('yh_login_token')
         },
-        selectedYear: "",
-        selectedStart: "",
-        selectedEnd: "",
+        startYear: "",
+        startMon: "",
+        endYear: "",
+        endMon:'',
         optionsYear: [{
           value: '2017',
         }, {
@@ -228,40 +180,30 @@
         }, {
           value: '12',
         }],
+        Brand:[],
+        Dealers:'',
+        Market:[],
         run: true,
       }
     },
-    methods: {
-      freshArea: function () {
-        $.fn.zTree.init($("#treeDemo"), this.setting, this.zNodes);
-        // zTree.getNodesByParam("checked", true, null);
-      },
-      runReport() {
-
-      },
-      getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", 'i'); // 匹配目标参数
-        var result = window.location.search.substr(1).match(reg); // 对querystring匹配目标参数
-        if (result != null) {
-          return decodeURIComponent(result[2]);
-        } else {
-          return null;
-        }
-
-      },
-      //标签切换
-      tab:function () {
-        $('.tab-content').eq(0).show();
-        $('[name=spend]').on('click',function (params) {
-          $('.tab-content').hide();
-          var tablabel = $(this).attr('tab-label');
-          console.log(tablabel);
-          $('.' + tablabel).show();
-        })
-      }
-    },
     mounted:function(){
-      this.tab();
+      this.$Util.tab('[name=spend]','.tab-content');
+    },
+    methods: {
+      runReport() {
+        this.selectedData.start_date = this.startYear + this.startMon;
+        this.selectedData.end_date = this.endYear + this.endMon;
+        this.selectedData.brand = this.Brand;
+        this.selectedData.dealer_include = this.Dealers;
+        this.selectedData.market = this.Market;
+        this.$http({
+          url:Urls.create_report,
+          method: 'POST',
+          data:this.selectedData
+        }).then(res => {
+          
+        });
+      }
     }
 
   }
@@ -269,7 +211,6 @@
 </script>
 
 <style>
-  @import 'ztree/css/zTreeStyle/zTreeStyle.css';
 
   .list-item {
     height: 50px;
